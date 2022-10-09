@@ -19,6 +19,7 @@ const nav = document.querySelector('nav');
 window.addEventListener('scroll',() => {
   if (window.scrollY>80) {
     nav.style.top = 0;
+    nav.style.opacity = '100%';
     if (window.scrollY>740) {
         nav.style.backgroundColor = "black";
 
@@ -32,25 +33,28 @@ window.addEventListener('scroll',() => {
   
 })
 let x = 1
-let listePseudos = ["Toppen","Jimi","Kent38","Zhik","103SPX"]
-const pseudo = document.getElementById('nomModele')
-const collec = document.querySelector('.nomCollection')
-
+let listePseudos = ["T#####","Jimi","Kent38","Zhik","103SPX"];
+const pseudo = document.getElementById('nomModele');
+const collec = document.querySelector('.nomCollection');
+const fonddemicadre = document.querySelector('#demicadrejs');
+let y = x+2
 btn1.addEventListener('click',()=>{
     x-=1;
-    if (x==0) (x=5)
+    if (x==0) (x=5);
+    y = x+2
     // cadre.innerHTML = 
-    acc.innerHTML = '<img src="./images/a' +x+ '.png" id = "skin"></img>';
-    pseudo.innerHTML= '<h3 >'+listePseudos[x]+'</h3>';
-    
+    acc.innerHTML = '<img src="./images/a' +5+ '.png" id = "skin"></img>';
+    pseudo.innerHTML= '<h3 >'+listePseudos[x-1]+'</h3>';
+    fonddemicadre.innerHTML = '<img src="./images/demicadre'+ y +'.png" id="demicadre"></img>'
 })
 
 btn2.addEventListener('click',()=>{
     x+=1
-    if (x==5) (x=0);
+    y = x+2
+    if (x==5) (x=1);
     acc.innerHTML = '<img src="./images/a' +x+ '.png" id = "skin"></img>';
-    
-    pseudo.innerHTML= '<h3 >'+listePseudos[x]+'</h3>'
+    fonddemicadre.innerHTML = '<img src="./images/demicadre'+ y +'.png" id="demicadre"></img>';
+    pseudo.innerHTML= '<h3 >'+listePseudos[x-1]+'</h3>'
     
 })
 //----------------------------------------------------

@@ -8,6 +8,8 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
+    font-family: 'Orbitron', sans-serif;
+
     
 }
 
@@ -18,10 +20,13 @@ body {
     top: 40%;
     /* background-color: aquamarine; */
     /* left: 30%; */
+
+
 }
 h1 {
     text-align: center;
-    font-family : "Century Gothic", Verdana;
+    /* font-family: 'Orbitron', sans-serif; */
+    transition: 0.3;
     color: aliceblue;
     font-size: 75px;
     /* top : 100%; */
@@ -49,7 +54,8 @@ h1 {
 }
 h3 {
     text-align: center;
-    font-family : "Century Gothic", Verdana;
+    font-family: 'Orbitron', sans-serif;
+
     color: aliceblue;
     font-size: 25px;
 }
@@ -164,10 +170,10 @@ h3 {
     text-align: center;
     position: relative;
     top: 2.5%;
-    left: 50%; */
-    transition: 0.8s;
+    left: 50%; 
+    transition: 0.4s;
     opacity: 0%;
-    transition-delay: 0.1s;
+    transition-delay: 0s;
 }
 #barre2 {
     /* align : center; */
@@ -194,7 +200,7 @@ opacity: 50%;
 }
 #b1 {
     left: 35%;
-    scale(2, 0.5);
+    scale:(2, 0.5);
 }
 #b2 {
     top: -2.5%;
@@ -215,10 +221,6 @@ opacity: 50%;
 }
 #dl {
     color: aliceblue;
-}
-img {
-    /* src : bonjour; */
-    
 }
 
 #pp {
@@ -242,8 +244,10 @@ nav {
     position: fixed;
     width: 100%;
     height: 75px;
-    top : 0;
+    top : -100px;
     left : 0;
+    opacity: 0%;
+    transition: 0.4s;
 }
     ul {
         display : flex;
